@@ -1,4 +1,4 @@
-name: Checkstyle Code Analysis
+name: Checkstyle Code Analysis test
 
 on:
   pull_request:
