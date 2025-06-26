@@ -30,8 +30,8 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven-
 
-      - name: Run Checkstyle (Fail on violations)
-        run: mvn --batch-mode checkstyle:checkstyle
+      - name: Run Checkstyle (fail on violations + generate HTML report)
+        run: mvn --batch-mode site checkstyle:checkstyle
 
       - name: Parse Checkstyle Summary (even if previous step failed)
         if: always()
